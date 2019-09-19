@@ -1,0 +1,16 @@
+version: '3'
+services:
+  faceyunsrv:
+    container_name: testrest
+    image: testrest:latest
+    restart: unless-stopped
+    ports:
+      - "3333:3333"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    labels:
+      aliyun.logs.faceyunsrv : "stdout"
+      aliyun.logs.faceyunsrv.format : "json"
