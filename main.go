@@ -12,7 +12,6 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	//readCloser, _ := r.GetBody()
 	bytes, e := ioutil.ReadAll(r.Body)
 	fmt.Println(string(bytes), e)
-	panic("test")
 }
 
 func main() {
